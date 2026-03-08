@@ -1,5 +1,7 @@
 # JanaSetu AI 🚀
 
+**🌐 Live Demo: [https://jana-setu.vercel.app](https://jana-setu.vercel.app)**
+
 JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to help citizens navigate and find government schemes they are eligible for. The platform leverages a FastAPI backend with an AI-driven eligibility engine and a modern React frontend for a premium user experience.
 
 ---
@@ -17,6 +19,7 @@ JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to he
 ## 🛠️ Tech Stack
 
 ### Frontend
+
 - **Framework**: [React 19](https://react.dev/)
 - **Build Tool**: [Vite](https://vitejs.dev/)
 - **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
@@ -24,6 +27,7 @@ JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to he
 - **Routing**: [React Router 7](https://reactrouter.com/)
 
 ### Backend
+
 - **Framework**: [FastAPI](https://fastapi.tiangolo.com/)
 - **Language**: [Python 3.10+](https://www.python.org/)
 - **Data Handling**: JSON-based scheme dataset with memory-efficient loading.
@@ -33,6 +37,7 @@ JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to he
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v18+)
 - Python (v3.10+)
 - npm or yarn
@@ -40,12 +45,14 @@ JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to he
 ### Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/lazy0ne369/JanaSetu.git
    cd JanaSetu
    ```
 
 2. **Backend Setup**:
+
    ```bash
    cd backend
    python -m venv venv
@@ -62,10 +69,12 @@ JanaSetu (People's Bridge) is a comprehensive AI-powered platform designed to he
 ### Running the Application
 
 1. **Start the Backend**:
+
    ```bash
    cd backend
    python main.py
    ```
+
    The backend will be available at `http://localhost:8000`.
 
 2. **Start the Frontend**:
