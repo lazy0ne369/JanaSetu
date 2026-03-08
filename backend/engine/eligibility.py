@@ -41,6 +41,34 @@ def calculate_eligibility(user_profile: Any, schemes_data: List[Dict[str, Any]])
         scheme_education = scheme.get("education", "Any")
         if scheme_education != "Any" and scheme_education.lower() != user_profile.education.lower():
             continue
+
+        # Hard Filter: Gender — exclude schemes restricted to a different gender
+        scheme_gender = scheme.get("gender", "All")
+        if scheme_gender != "All" and scheme_gender.lower() != user_profile.gender.lower():
+            continue
+
+        # Hard Filter: State — exclude schemes restricted to a different state
+        scheme_state = scheme.get("state", "All")
+        if scheme_state != "All" and scheme_state.lower() != user_profile.state.lower():
+            continue
+
+        # Hard Filter: Category — exclude schemes restricted to a different category
+        scheme_category = scheme.get("category", "All")
+        if scheme_category != "All" and scheme_category.lower() != user_profile.category.lower():
+            continue
+
+        # Hard Filter: Occupation — exclude schemes restricted to a different occupation
+        scheme_occupation = scheme.get("occupation", "All")
+        if scheme_occupation != "All" and scheme_occupation.lower() != user_profile.occupation.lower():
+            continue
+
+        # Hard Filter: Age — exclude if user is outside the scheme's age range
+        if not (scheme["min_age"] <= user_profile.age <= scheme["max_age"]):
+            continue
+
+        # Hard Filter: Income — exclude if user's income exceeds the scheme's income limit
+        if user_profile.income > scheme["income_limit"]:
+            continue
             
         # Calculate Score deterministically
         score = score_scheme(user_profile, scheme)
