@@ -96,6 +96,10 @@ export default function Login() {
                     </button>
                 </form>
 
+                <p className="mono" style={{ fontSize: '0.72rem', color: 'var(--text-3)', marginTop: '1.5rem', letterSpacing: '0.05em' }}>
+                    DEMO PASSKEY: <span style={{ color: 'var(--cyan)' }}>0000</span>
+                </p>
+
                 <div className="login-status-bar">
                     <span>STATUS: <span style={{ color: isAuthenticating ? 'var(--cyan)' : 'inherit' }}>{isAuthenticating ? 'VERIFYING' : 'AWAITING_INPUT'}</span></span>
                     <span>NODE: SECURE-01</span>

@@ -98,6 +98,16 @@ JanaSetu/
 
 ---
 
+## 🔑 Demo Access
+
+To log in to the operator dashboard, use the following passkey:
+
+```
+Passcode: 0000
+```
+
+---
+
 ## 🤝 Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
