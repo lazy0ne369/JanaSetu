@@ -40,10 +40,13 @@ async def global_exception_handler(request: Request, exc: Exception):
         content={"detail": "Critical service error. The incident has been logged."},
     )
 
-# CORS Rule
+# CORS Rule — reads allowed origins from env var for production flexibility
+_raw_origins = os.getenv("ALLOWED_ORIGINS", "http://localhost:5173,http://localhost:5174")
+_allowed_origins = [o.strip() for o in _raw_origins.split(",") if o.strip()]
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173", "http://localhost:5174"], # Added 5174 just in case
+    allow_origins=_allowed_origins,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
